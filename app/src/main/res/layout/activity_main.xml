@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ranked Engine AI"
+            android:textColor="#FFFFFF"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="API Ключ Нейросети:"
+                android:textColor="#B3B3B3"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/tvKeyHelp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="#1A1A1A"
+                android:text="?"
+                android:textColor="#00FF66"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/etApiKey"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#1E1E1E"
+            android:hint="Вставьте API ключ"
+            android:textColorHint="#555555"
+            android:textColor="#FFFFFF"
+            android:paddingHorizontal="12dp"
+            android:inputType="textPassword"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Режим работы (Промпт):"
+            android:textColor="#B3B3B3"
+            android:textSize="14sp"
+            android:layout_marginBottom="8dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgPromptMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <RadioButton
+                android:id="@+id/rbSystemPrompt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Системный"
+                android:textColor="#FFFFFF"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/rbCustomPrompt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Кастомный"
+                android:textColor="#FFFFFF"/>
+        </RadioGroup>
+
+        <!-- БЛОК ПОЛЕЙ СИСТЕМНОГО ПРОМПТА -->
+        <LinearLayout
+            android:id="@+id/llSystemPromptFields"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Игрок 1 (Вы)"
+                android:textColor="#00FF66"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                android:layout_marginBottom="4dp"/>
+            <EditText
+                android:id="@+id/etPlayer1Nick"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="#1E1E1E"
+                android:hint="Ник игрока 1"
+                android:textColorHint="#555555"
+                android:textColor="#FFFFFF"
+                android:paddingHorizontal="12dp"
+                android:layout_marginBottom="6dp"/>
+            <EditText
+                android:id="@+id/etPlayer1Brawlers"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="#1E1E1E"
+                android:hint="Бойцы 11 уровня с ГЗ (через запятую)"
+                android:textColorHint="#555555"
+                android:textColor="#FFFFFF"
+                android:paddingHorizontal="12dp"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Игрок 2"
+                android:textColor="#00FF66"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                android:layout_marginBottom="4dp"/>
+            <EditText
+                android:id="@+id/etPlayer2Nick"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="#1E1E1E"
+                android:hint="Ник игрока 2"
+                android:textColorHint="#555555"
+                android:textColor="#FFFFFF"
+                android:paddingHorizontal="12dp"
+                android:layout_marginBottom="6dp"/>
+            <EditText
+                android:id="@+id/etPlayer2Brawlers"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="#1E1E1E"
+                android:hint="Бойцы 11 уровня"
+                android:textColorHint="#555555"
+                android:textColor="#FFFFFF"
+                android:paddingHorizontal="12dp"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Игрок 3"
+                android:textColor="#00FF66"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                android:layout_marginBottom="4dp"/>
+            <EditText
+                android:id="@+id/etPlayer3Nick"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="#1E1E1E"
+                android:hint="Ник игрока 3"
+                android:textColorHint="#555555"
+                android:textColor="#FFFFFF"
+                android:paddingHorizontal="12dp"
+                android:layout_marginBottom="6dp"/>
+            <EditText
+                android:id="@+id/etPlayer3Brawlers"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="#1E1E1E"
+                android:hint="Бойцы 11 уровня"
+                android:textColorHint="#555555"
+                android:textColor="#FFFFFF"
+                android:paddingHorizontal="12dp"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Шаблон системного запроса к ИИ:"
+                android:textColor="#B3B3B3"
+                android:textSize="13sp"
+                android:layout_marginBottom="6dp"/>
+            <EditText
+                android:id="@+id/etSystemPromptPreview"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="#161616"
+                android:textColor="#777777"
+                android:padding="10dp"
+                android:gravity="top"
+                android:textSize="12sp"
+                android:inputType="textMultiLine"
+                android:focusable="false"
+                android:clickable="false"
+                android:layout_marginBottom="4dp"/>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/etCustomPrompt"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="#1E1E1E"
+            android:hint="Напишите кастомные правила для ИИ здесь..."
+            android:textColorHint="#555555"
+            android:textColor="#FFFFFF"
+            android:padding="12dp"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:visibility="gone"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Кнопки управления -->
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Сохранить пулы бойцов"
+            android:backgroundTint="#222222"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:id="@+id/btnStartEngine"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:text="ЗАПУСТИТЬ ДВИЖОК В ШТОРКЕ"
+            android:backgroundTint="#00FF66"
+            android:textColor="#121212"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:id="@+id/btnStopEngine"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="ОТКЛЮЧИТЬ ДЕМОНСТРАЦИЮ"
+            android:backgroundTint="#FF3333"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"/>
+
+    </LinearLayout>
+</ScrollView>

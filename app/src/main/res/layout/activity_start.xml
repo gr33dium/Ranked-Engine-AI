@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    android:padding="24dp"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/tvStatusTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ranked Engine AI"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:id="@+id/tvInstruction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Загрузка..."
+        android:textColor="#CCCCCC"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:layout_marginBottom="30dp"/>
+
+    <Button
+        android:id="@+id/btnAction"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="Далее"
+        android:backgroundTint="#00FF66"
+        android:textColor="#121212"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Кликабельные ссылки на автора и ресурсы -->
+    <TextView
+        android:id="@+id/tvLinks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Инструкции и поддержка: t.me/RankedEngineAI\nРазработчик: github.com/gr33dium"
+        android:textColor="#5555FF"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:autoLink="all"
+        android:linksClickable="true"
+        android:textColorLink="#00FF66"/>
+</LinearLayout>

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Ranked Engine</string>
+    <string name="service_description">Движок ИИ-аналитики для игр, имеющих ранговый бой. Использует Accessibility для оверлеев.</string>
+</resources>
